@@ -1,7 +1,7 @@
-package com.example.restservice.Service.CityPopulationServiceImpl;
-import com.example.restservice.Dao.CityPopulationDao;
-import com.example.restservice.Model.CityPopulation;
-import com.example.restservice.Service.CityPopulationService;
+package com.example.restservice.service.cityPopulationServiceImpl;
+import com.example.restservice.dao.CityPopulationDao;
+import com.example.restservice.model.CityPopulation;
+import com.example.restservice.service.CityPopulationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,8 +1,9 @@
-package com.example.restservice.Dao.CityPopulationDaoImpl;
+package com.example.restservice.dao.cityPopulationDaoImpl;
 
-import com.example.restservice.Dao.CityPopulationDao;
-import com.example.restservice.Model.CityPopulation;
-import com.example.restservice.Model.CityPopulationResponse;
+import com.example.restservice.dao.CityPopulationDao;
+import com.example.restservice.model.CityPopulation;
+import com.example.restservice.model.CityPopulationResponse;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.client.RestTemplate;
@@ -11,6 +12,9 @@ import java.util.Collections;
 
 @Repository
 public class CityDaoPopulationImpl implements CityPopulationDao {
+
+    @Value("${countriesnow.api.url}")
+    private String apiUrl;
     @Override
     public CityPopulation getCityPopulation(String cityName) {
         RestTemplate restTemplate = new RestTemplate();
@@ -20,8 +24,6 @@ public class CityDaoPopulationImpl implements CityPopulationDao {
         headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
 
         HttpEntity<String> requestEntity = new HttpEntity<>(headers);
-
-        String apiUrl = "https://countriesnow.space/api/v0.1/countries/population/cities";
 
         ResponseEntity<CityPopulationResponse> responseEntity = restTemplate.getForEntity(
                 apiUrl + "/q?city=" + cityName,

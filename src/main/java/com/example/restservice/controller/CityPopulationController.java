@@ -1,7 +1,7 @@
-package com.example.restservice.Controler;
+package com.example.restservice.controller;
 
-import com.example.restservice.Model.CityPopulation;
-import com.example.restservice.Service.CityPopulationServiceImpl.CityPopulationServiceImpl;
+import com.example.restservice.model.CityPopulation;
+import com.example.restservice.service.cityPopulationServiceImpl.CityPopulationServiceImpl;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

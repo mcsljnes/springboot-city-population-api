@@ -1,6 +1,5 @@
-package com.example.restservice.Model;
+package com.example.restservice.model;
 
-import com.example.restservice.Model.PopulationCount;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
