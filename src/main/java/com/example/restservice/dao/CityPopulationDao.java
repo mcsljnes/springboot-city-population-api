@@ -1,7 +1,11 @@
 package com.example.restservice.dao;
 
-import com.example.restservice.model.CityPopulation;
+
+import com.example.restservice.entity.CityPopulation;
 
 public interface CityPopulationDao {
-    public CityPopulation getCityPopulation(String cityName);
+
+    public CityPopulation getCityPopulationFromApi(String cityName);
+    public CityPopulation getCityPopulationFromBdd(String cityName);
+
 }

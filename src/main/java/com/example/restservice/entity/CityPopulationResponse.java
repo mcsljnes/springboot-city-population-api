@@ -1,4 +1,4 @@
-package com.example.restservice.model;
+package com.example.restservice.entity;
 
 public class CityPopulationResponse {
     private CityPopulation data;
